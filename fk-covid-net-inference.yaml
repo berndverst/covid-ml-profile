@@ -25,12 +25,14 @@ spec:
           value: minio-azure-service.kubeflow:9000
         - name: MINIO_ACCESS_KEY
           valueFrom:
-            name: azure-storage-secret
-            key: accountname
+            secretKeyRef:
+              name: azure-storage-secret
+              key: accountname
         - name: MINIO_SECRET_KEY
           valueFrom:
-            name: azure-storage-secret
-            key: accountkey
+            secretKeyRef:
+              name: azure-storage-secret
+              key: accountkey
         - name: MINIO_SSL
           value: "false"
 ---
