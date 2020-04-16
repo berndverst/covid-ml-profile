@@ -22,11 +22,15 @@ spec:
         - containerPort: 8080
         env:
         - name: MINIO_ENDPOINT
-          value: minio-service.kubeflow:9000
+          value: minio-azure-service.kubeflow:9000
         - name: MINIO_ACCESS_KEY
-          value: minio
+          valueFrom:
+            name: azure-storage-secret
+            key: accountname
         - name: MINIO_SECRET_KEY
-          value: minio123
+          valueFrom:
+            name: azure-storage-secret
+            key: accountkey
         - name: MINIO_SSL
           value: "false"
         - name: FK_COVID_NET_INFERENCE_ENDPOINT
