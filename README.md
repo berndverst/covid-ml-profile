@@ -1,6 +1,6 @@
 # COVID-NET on Azure Kubernetes Service (AKS)
 
-This project adapts the COVID-NET inferencing app example created by WeaveWork for FireKube for use with Azure AKS instead.
+This project adapts the COVID-NET inferencing app example created by Weaveworks for FireKube for use with Azure AKS instead.
 
 ## Creating an AKS cluster
 If you do not already have an AKS cluster, create one using the Azure CLI like so:
@@ -71,7 +71,7 @@ kubectl get svc fk-covid-net-frontend -n kubeflow -o jsonpath='{.status.loadBala
 ```
 
 ### References
-This project was created in collaboration with WeaveWorks and is based on the work by Chanwit Kaewkasi.
+This project was created in collaboration with Weaveworks and is based on the work by Chanwit Kaewkasi.
 
 https://github.com/chanwit/covid-ml-profile
 
